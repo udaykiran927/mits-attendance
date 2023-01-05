@@ -108,14 +108,14 @@ def studentform():
     email=sval[0].lower()
     password=sval[1]
     k=l
+    if len(k)==0:
+      return render_template("student.html",msg="No Class Scheduled Yet")
     course=k[1]
     rmn=k[-1]
     try:
         auth.sign_in_with_email_and_password(email,password)
     except:
         return render_template("student.html",msg="Invalid User or Incorrect Password")
-    if len(l)==0:
-        return render_template("student.html",msg="No Class Scheduled Yet")
     return render_template("studentform.html",rm=rmn,course="Attendance for {} class".format(course))
 
 @app.route("/predict",methods=["POST","GET"])
