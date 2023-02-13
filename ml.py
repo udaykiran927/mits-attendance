@@ -3,7 +3,7 @@ import numpy as np
 import pickle
 from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsClassifier
-df=pd.read_csv("class_room-216-217.csv")
+df=pd.read_csv("class-16-17.csv")
 x=df.drop("place",axis=1)
 y=df.place
 #x_train,x_test,y_train,y_test=train_test_split(features, labels, test_size=0.2, random_state=42)
