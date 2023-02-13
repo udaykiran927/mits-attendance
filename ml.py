@@ -9,7 +9,6 @@ y=df.place
 #x_train,x_test,y_train,y_test=train_test_split(features, labels, test_size=0.2, random_state=42)
 knn = KNeighborsClassifier(n_neighbors=19,metric='euclidean')
 knn.fit(x,y)
-print(knn.predict([[13.6300942,78.477928,216],])[0])
 pickle.dump(knn,open("model.pkl","wb"))
 
 
