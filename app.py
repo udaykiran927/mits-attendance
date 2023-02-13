@@ -139,7 +139,6 @@ def predict():
     else:
         marked="Present"
         status.append(marked)
-    print(status)
     return render_template("studentform.html",attend="Your attendence marked as: "+marked)
 
 @app.route("/download",methods=["POST","GET"])
