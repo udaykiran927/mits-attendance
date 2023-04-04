@@ -9,7 +9,7 @@ import pickle
 
 
 app=Flask(__name__)
-df=pd.read_csv("class-16-17.csv")
+df=pd.read_csv("class-merge.csv")
 model=pickle.load(open("model.pkl","rb"))
 firebaseConfig={'apiKey': "AIzaSyC24uvyXxuMzw_96-SlMk_BEximuUmUTPY",
   'authDomain': "uvauthentication.firebaseapp.com",
