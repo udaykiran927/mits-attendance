@@ -7,7 +7,7 @@ df=pd.read_csv("class-16-17.csv")
 x=df.drop("place",axis=1)
 y=df.place
 #x_train,x_test,y_train,y_test=train_test_split(features, labels, test_size=0.2, random_state=42)
-knn = KNeighborsClassifier(n_neighbors=19,metric='euclidean')
+knn = KNeighborsClassifier(n_neighbors=1,metric='manhattan')
 knn.fit(x,y)
 pickle.dump(knn,open("model.pkl","wb"))
 
